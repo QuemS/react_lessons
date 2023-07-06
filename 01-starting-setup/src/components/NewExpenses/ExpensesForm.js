@@ -48,15 +48,15 @@ const ExpensesForm = (props) => {
     // })
   }
 
-  const inputChangeHandler = (identified, value) => {
-    if (identified === 'title') {
-      setEnteredTitle(value)
-    } else if (identified === 'date') {
-      setEnteredDate(value)
-    } else {
-      setEnteredAmount(value)
-    }
-  }
+  // const inputChangeHandler = (identified, value) => {
+  //   if (identified === 'title') {
+  //     setEnteredTitle(value)
+  //   } else if (identified === 'date') {
+  //     setEnteredDate(value)
+  //   } else {
+  //     setEnteredAmount(value)
+  //   }
+  // }
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -89,7 +89,9 @@ const ExpensesForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='Button' onClick={props.onCancel}>Cancel</button>
         <button type='submit'>Add Expense</button>
+
       </div>
 
     </form>
